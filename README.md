@@ -1,3 +1,3 @@
 hi.
 
-I'm grace, wlcome to the code.
+I'm grace, welcome to the code.
