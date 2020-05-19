@@ -1,0 +1,63 @@
+/*The home page reaaly does deserve its own css*/
+
+body {
+    /*Sets background color*/
+    animation: 10000ms ease-in-out infinite colorChange;
+}
+
+button {
+    background-color: white;
+    border: white;
+    color: black;
+    padding: 30px;
+}
+
+
+img {
+    width: 100px;
+    height: 100px; 
+    margin-left: auto;
+    margin-right: auto;
+    display: block; 
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: red
+    } 
+    10% {
+        background-color: orangered
+    }
+    20% {
+        background-color: orange
+    }
+    30% {
+        background-color: yellow
+    }
+    40% {
+        background-color: yellowgreen
+    }
+    50% {
+        background-color: green
+    }
+    60% {
+        background-color: teal
+    } 
+    70% {
+        background-color: blue
+    }
+    80% {
+        background-color: blueviolet
+    }
+    90% {
+        background-color: violet
+    }
+    100% {
+        background-color: red
+    }
+}
+
+
+
+
+
