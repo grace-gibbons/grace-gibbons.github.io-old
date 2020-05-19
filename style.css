@@ -1,16 +1,22 @@
 
 body {
     background-color: #cccccc;
- 
+    font-family: "IBM Plex Mono", monospace; 
+    font-size: 24px; 
+}
+
+h2 {
+   text-align: center; 
 }
 
 p {
     /*Set font*/
-    font-family: "Consolas", monaco, monospace; 
+    font-family: "IBM Plex Mono", monospace; 
+    font-size: 20px; 
     /*creates a border around the paragraph*/
     width: 500px; 
     /*Height is determined by number of words*/
-    border: 1px solid black;
+    /*border: 1px solid black;
     padding: 20px; 
     /*Centered in middle of screen*/
     margin-left: auto;
@@ -48,6 +54,8 @@ ul {
 .topnav a:hover {
     background-color: #111; 
 }
+
+
 
 
 
