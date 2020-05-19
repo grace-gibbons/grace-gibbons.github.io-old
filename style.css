@@ -1,0 +1,63 @@
+
+body {
+    background-color: #cccccc;
+ 
+}
+
+p {
+    /*Set font*/
+    font-family: "Consolas", monaco, monospace; 
+    /*creates a border around the paragraph*/
+    width: 500px; 
+    /*Height is determined by number of words*/
+    border: 1px solid black;
+    padding: 20px; 
+    /*Centered in middle of screen*/
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+/*Style the Navigation bar*/
+ul {
+    /*gets rid of bullets*/
+    list-style-type: none;
+    margin: 0;
+    padding: 0; 
+    overflow: hidden;
+    background-color: #333;
+}
+
+/*Navigation bar setup*/
+/*Container*/
+.topnav {
+    overflow: hidden;
+    background-color: #333;
+}
+/*Links*/
+.topnav a {
+    font-size: 20px;
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px; 
+    text-decoration: none;
+}
+/*Change color when link is hovered over*/
+.topnav a:hover {
+    background-color: #111; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
