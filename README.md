@@ -1,2 +1,5 @@
 # grace.website
-My first website. Please enjoy.
+
+Hello there!
+
+I'm grace and I write code and stuff.
