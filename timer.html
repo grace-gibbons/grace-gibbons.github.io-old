@@ -1,45 +1,50 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <!--Includes the CSS for style-->
-        <link rel="stylesheet" href="style.css">
-    </header>
+<head>
+    <!--Includes the CSS for style-->
+    <link rel="stylesheet" href="style.css">
+</head>
      
    
-    <body>
-        <!--Navigation Bar-->
-        <div class="topnav">
-            <a href="index.html">Home</a>
-            <a href="timer.html">Countdown</a>
-             <a href="games.html">Games</a>
-        </div>
+<body>
+    <!--Navigation Bar-->
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timer.html">Countdown</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Games</a>
+            <div class="dropdown-content">
+                <a href="gameSquarePage.html">Square Adventure</a>
+                <a href="gameTextAdventure.html">Text Adventure</a>
+            </div>
+        </li>
+    </ul>
+       
+    <h2> Groundhog Day Countdown </h2>
 
-        <h2> Groundhog Day Countdown </h2>
-
-        <p id="countdown"></p>
-        <script>
-            //Date we are counting to
-            var countDownDate = new Date("Feb 2, 2021 00:00:00").getTime();
-            //update every second
-            var x = setInterval(function() {
-                //Today's date/time
-                var now = new Date().getTime();
-                //calculate time between then and now
-                var distance = countDownDate - now;
-                //Calculations for days, hours, minutes, and seconds
-                var days = Math.floor(distance / (1000*60*60*24));
-                var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
-                var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
-                var seconds = Math.floor((distance % (1000 * 60)) / 1000); 
-                //Output result, id = "countdown"
-                document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
-                //Countdown is over
-                if(distance < 0) {
-                    clearInterval(x);
-                    document.getElementById("countdown").innerHTML = "HAPPY GROUNDHOG DAY";
-                }
-            }, 1000);
-        
-        </script>
-    </body>
+    <p id="countdown"></p>
+    <script>
+        //Date we are counting to
+        var countDownDate = new Date("Feb 2, 2021 00:00:00").getTime();
+        //update every second
+        var x = setInterval(function() {
+            //Today's date/time
+            var now = new Date().getTime();
+            //calculate time between then and now
+            var distance = countDownDate - now;
+            //Calculations for days, hours, minutes, and seconds
+            var days = Math.floor(distance / (1000*60*60*24));
+            var hours = Math.floor((distance % (1000*60*60*24)) / (1000*60*60));
+            var minutes = Math.floor((distance % (1000*60*60)) / (1000*60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000); 
+            //Output result, id = "countdown"
+            document.getElementById("countdown").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            //Countdown is over
+            if(distance < 0) {
+                clearInterval(x);
+                document.getElementById("countdown").innerHTML = "HAPPY GROUNDHOG DAY";
+            }
+        }, 1000);
+    </script>
+</body>
 </html>
