@@ -1,21 +1,25 @@
 <!DOCTYPE html>
 <html>
-    <header>
-        <!--Includes the CSS for style-->
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="home.css">
-    </header>
+<head>
+    <!--Includes the CSS for style-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="cssHome.css">
+</head>
      
-   
-    <body>
-        <!--Navigation Bar-->
-        <div class="topnav">
-            <a href="home.html">Home</a>
-            <a href="timer.html">Countdown</a>
-            <a href="games.html">Games</a>
-        </div>
+<body>
+    <!--Navigation Bar-->
+    <ul>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="timer.html">Countdown</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Games</a>
+            <div class="dropdown-content">
+                <a href="gameSquarePage.html">Square Adventure</a>
+                <a href="gameTextAdventure.html">Text Adventure</a>
+            </div>
+        </li>
+    </ul>
 
-        <h2> Home Page </h2>
-
-    </body>
+    <h2> Home Page </h2>
+</body>
 </html>
