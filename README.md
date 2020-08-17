@@ -1,5 +1,5 @@
-I'm grace, welcome to the code.
+Hi, I'm grace. Welcome to my website code.
 
-This is my website. It is very simple, but I am proud of it. I plan to make further additions and add to the general chaos.
+This is a personal project for my own learning experience, so I plan to make further additions as I go.
 
 :)
