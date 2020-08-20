@@ -1,0 +1,114 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <!--Includes the CSS for style-->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!--Navigation Bar-->
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="timer.html">Countdown</a></li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Games</a>
+            <div class="dropdown-content">
+                <a href="gameSquarePage.html">Square Adventure</a>
+                <a href="gameTextAdventure.html">Text Adventure</a>
+            </div>
+        </li>
+        <li class="dropdown">
+            <a href="javascript:void(0)" class="dropbtn">Maze Generator</a>
+            <div class="dropdown-content">
+                <a href="maze.html">Recursive Backtracker</a>
+                <a href="aboutMaze.html">About Maze Generators</a>
+            </div>
+        </li>
+        <li><a href="art.html">Art</a></li>
+    </ul>
+    <h2>Maze Generators</h2>
+    <p class="par">
+        &nbsp;&nbsp;&nbsp;&nbsp;One day I was thinking about mazes and I said to myself, "I wonder if you could code that". I looked into it and it turns out there are many methods! I did a ton of research because I was curious. Then I decided
+        to put it here, neatly organized and all in one place.
+    </p>
+
+    <h3> Recurisve Backtracker </h3>
+    <p class="par">
+        &nbsp;&nbsp;&nbsp;&nbsp;The recursive backtracer is simple to implement and easy to understand. It generates mazes with small dead ends flowing from longer passages. It is commonly used to generate mazes for video games.
+        <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;I have found this method to be effective and easy to implement, given that this is my first maze generator.
+        <br />
+    </p>
+
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;Here is the rough process I used to generate the maze: </h5>
+    <p class="par">
+        1. Start from a random cell, mark it as visited, and add it to the list <br />
+        2. Set the random cell equal to the current cell <br />
+        3. Randomly select an adjacent cell that has not been visited <br />
+        4. Remove the wall between the cells and add the unvisited cell to the list <br />
+        5. Set the unvisited cell equal to the current cell and mark it as visited <br />
+        6. Repeat this process <br />
+        7. If the current cell has no unvisited neighbors, move backwards until a cell with an unvisited neighbor is found <br />
+    </p>
+
+    <h5>&nbsp;&nbsp;&nbsp;&nbsp;Problems and Lessons: </h5>
+    <p class="par">
+        &nbsp;&nbsp;&nbsp;&nbsp;I first coded the maze generator in java, since it is the language I am most familiar with. I then used the same logic, but redid it in javascript for this website.
+        There is a key differenece I would like to mention. In Java, I used a linked list to store the cells in order. In Javascript, I had to use an array. This made me realize I probably could have used an array in java. <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;When I first created the maze in Java, I had an issue where the maze would stop generating when it reached a single cell with all its neighbors visited. It seems like a trivial error, but it vexed me for a long time.
+        I finally realized that when the generator backtracked to find a cell with an unvisited neighbor, I set the current cell equal to the unvisited cell instead of the visited cell next to it.
+        This caused an infinite loop because the current cell was check for unvisited neighbors, didn't have any, but it was still marked as the next unvisited cell, so it would find itself and set itself to the current cell.
+        I fixed the problem by setting the current cell to the visited neighbor, so when it checked for an unvisited neighbor, it would find one. It was a simple mistake, but it took me a while to figure it out.
+    </p>
+
+    <h3> Recurisve Division Algorithm </h3>
+    <p class="par">
+        &nbsp;&nbsp;&nbsp;&nbsp;This algorithm is cool and different from the others I found. It starts with a blank space. The space is divided by a randomly placed line and a random hole is put in that line, which is a maze wall.
+        There are now two distinct chambers. Those chambers are divided by another random line and a random hole is made in each of those walls. This process continues and could continue infinitely. This method generates mazes with long straight
+        passages and has short dead ends.
+    </p>
+
+    <h3> Hunt and Kill Method</h3>
+    <p class="par">
+        &nbsp;&nbsp;&nbsp;&nbsp;The hunt and kill method is very similar to the recursive backtracker. It starts at a random location and goes until it hits a dead end. Instead of backtracking on itself, it picks a random unvisited location and
+        starts over. It generates mazes with long passages.
+    </p>
+
+
+    <h3> Binary Tree Algorithm </h3>
+    <p class="par">
+        &nbsp;&nbsp;&nbsp;&nbsp;The binary tree algorithm is cool to watch and generates some interesting mazes. It starts from any location and chooses a random direction, north or west, repeating until all the cells have been visited.
+        That's it. The mazes it creates always have long passages on the top and left and there are never any dead ends that face north or west. It can also never generate crossroads, or a point with four paths to choose. I think the mazes
+        it generates are cool since there are so many unique attributes but I don't think it is the most effect generator, especially given the long passages on the top and left.
+    </p>
+
+
+    <h3> Sidewinder Algorithm </h3>
+    <p class="par">
+        &nbsp;&nbsp;&nbsp;&nbsp;The sidewinder algorithm is similar to the binary tree algorithm. It generates a long passage on the top and has no north facing dead ends. The algorithm decides whether to generate a path east from the current
+        cell. If the path is generates, the next cell becomes the current cell and the process is repeated. If a path was not made then a path is carved north from any visited cell.
+    </p>
+
+    <h3> Uniform Spanning Tree </h3>
+    <p class="par">
+        &nbsp;&nbsp;&nbsp;&nbsp;The Aldous-Broder algorithm and Wilson's algorithm both use uniform spanning trees. A uniform spanning tree is a spanning tree chosen randomly. A spanning tree connects all vertices in a graph. While the concept
+        sounds confusing, the algorithms are very simple. They are also very inefficient. The Aldous-Broder method chooses a vertex, and draws a line to a neighboring vertex, repeating until all they have all been visited. Wilson's method is similar.
+        Unfortunately, both methods are slow and inefficient.
+    </p>
+
+    <h3> Minimum Spanning Tree </h3>
+    <p class="par">
+        &nbsp;&nbsp;&nbsp;&nbsp;Kruskal's algorithm and Prim's algorithm both utilize minimum spanning trees. A minimum spanning tree shortens the lengths of the lines in a tree. The mazes generated have shorter passages and small dead ends.
+    </p>
+
+    <h3> Eller's Algorithm </h3>
+    <p class="par">
+        &nbsp;&nbsp;&nbsp;&nbsp;Eller's Algorithm is very complex but is fast and can generate infinite mazes. It builds the maze one row at a time, which causes it to have long vertical passages.
+    </p>
+    <br />
+    <br />
+
+
+
+</body>
+</html>
