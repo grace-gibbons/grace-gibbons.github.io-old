@@ -1,0 +1,33 @@
+
+body.red {
+    background-color: #FF0000;
+}
+
+
+body.orange {
+    background-color: #ff6a00;
+}
+
+
+body.yellow {
+    background-color: #ffd800;
+}
+
+
+body.green {
+    background-color: #00b217;
+}
+
+
+body.blue {
+    background-color: #0026ff;
+}
+
+
+body.purple {
+    background-color: #b200ff;
+}
+
+p {
+    background-color: #cccccc;
+}

@@ -5,8 +5,26 @@ body {
     font-size: 24px; 
 }
 
-body.art {
-    background-color: #000000;
+form {
+    text-align: center;
+}
+
+.quizButton {
+    background-color: #616161;
+    border: none;
+    color: #F4F4F4;
+    padding: 15px;
+    text-align: center;
+    margin: 10px;
+    font-family: "IBM Plex Mono", monospace;
+    font-size: 15px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+
+}
+
+.quizButton:hover {
+        background-color: #515151;
 }
 
 h2 {

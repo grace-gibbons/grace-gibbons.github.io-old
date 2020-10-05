@@ -109,8 +109,6 @@ function drawMaze() {
 function generate() {
 	nextCell = getUnvisitedNeighbor(currentCell);
 	if (nextCell != -1) {
-		//System.out.println("Cell " + currentCell);
-		//System.out.println("NextCell " + nextCell);
 		removeWall(currentCell, nextCell);
 		currentCell = nextCell;
 		mazeOrder.unshift(currentCell);
@@ -118,10 +116,9 @@ function generate() {
 	} else if (nextCell == -1) {
 		for (var i = 0; i < mazeOrder.length - 1; i++) {
 			var previousCell = mazeOrder[i];
-			//System.out.println("Previous: " + previousCell);
+			
 			var possibleNextCell = getUnvisitedNeighbor(previousCell);
 			if (possibleNextCell != -1) {
-				//System.out.println("Possible: " + possibleNextCell);
 				//currentCell = possibleNextCell;
 				currentCell = previousCell;
 				break;

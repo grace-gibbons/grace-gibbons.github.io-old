@@ -1,11 +1,11 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
     <!--Includes the CSS for style-->
     <link rel="stylesheet" href="style.css">
 </head>
-    
-<body>
+
+<body class="quiz">
     <!--Navigation Bar-->
     <ul>
         <li><a href="index.html">Home</a></li>
@@ -26,14 +26,34 @@
         </li>
         <li><a href="quiz.html">Quiz</a></li>
     </ul>
-       
-    <h2>The Adventures of a Square</h2>
-    <p>The thrilling tale of a single square in an empty screen...</p>
 
-    <canvas id="jumpGame" width="640" height="480">Canvas not supported</canvas>
-    <script src="gameSquare.js"></script>
+    <h2 class="art"> What color are you based on your favorite color? </h2>
 
-    <p> Use wasd to move. </p>
+    <script src="quizOptions.js"></script>
+
+    <form id="quiz" onsubmit="submitForm();">
+        <!--action="quizResults/red.html"-->
+        <label for="option">Red</label>
+        <input type="radio" name="option" value="0" />
+        <br />
+        <label for="option">Orange</label>
+        <input type="radio" name="option" />
+        <br />
+        <label for="option">Yellow</label>
+        <input type="radio" name="option" />
+        <br />
+        <label for="option">Green</label>
+        <input type="radio" name="option" />
+        <br />
+        <label for="option">Blue</label>
+        <input type="radio" name="option" />
+        <br />
+        <label for="option">Purple</label>
+        <input type="radio" name="option" />
+        <br />
+        <input type="submit" />
+    </form>
+
 
 </body>
 </html>
